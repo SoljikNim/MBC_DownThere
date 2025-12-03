@@ -2,21 +2,17 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-// Saved in Blit.cs
+// Blit renderer feature (파일명과 클래스명이 달라도 Unity에서 동작합니다)
 public class Blit : ScriptableRendererFeature
 {
 
     public class BlitPass : ScriptableRenderPass
     {
-        public enum RenderTarget
-        {
-            Color,
-            RenderTexture,
-        }
+        // RenderTarget enum은 사용되지 않아 제거했습니다.
 
         public Material blitMaterial = null;
         public int blitShaderPassIndex = 0;
-        public FilterMode filterMode { get; set; }
+        public FilterMode filterMode { get; set; } = FilterMode.Bilinear;
 
         private RenderTargetIdentifier source { get; set; }
         private RenderTargetHandle destination { get; set; }
@@ -76,6 +72,10 @@ public class Blit : ScriptableRendererFeature
 
         public Material blitMaterial = null;
         public int blitMaterialPassIndex = -1;
+
+        // 인스펙터에서 설정 가능한 필터 모드 추가 (미설정 시 Bilinear)
+        public FilterMode filterMode = FilterMode.Bilinear;
+
         public Target destination = Target.Color;
         public string textureId = "_BlitPassTexture";
     }
@@ -87,7 +87,7 @@ public class Blit : ScriptableRendererFeature
     }
 
     public BlitSettings settings = new BlitSettings();
-    RenderTargetHandle m_RenderTextureHandle;
+    RenderTarget    Handle m_RenderTextureHandle;
 
     BlitPass blitPass;
 
@@ -96,6 +96,10 @@ public class Blit : ScriptableRendererFeature
         var passIndex = settings.blitMaterial != null ? settings.blitMaterial.passCount - 1 : 1;
         settings.blitMaterialPassIndex = Mathf.Clamp(settings.blitMaterialPassIndex, -1, passIndex);
         blitPass = new BlitPass(settings.Event, settings.blitMaterial, settings.blitMaterialPassIndex, name);
+
+        // 설정된 filterMode를 패스에 전달 (이전에는 filterMode가 사용되지 않음)
+        blitPass.filterMode = settings.filterMode;
+
         m_RenderTextureHandle.Init(settings.textureId);
     }
 
