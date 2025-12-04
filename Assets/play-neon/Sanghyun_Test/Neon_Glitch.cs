@@ -9,11 +9,13 @@ public class Neon_Glitch : MonoBehaviour
     public Vector2 glitchRandomTime = new Vector2(0.1f, 1f);
     public float glitchDutation = 0.1f;
 
+    IEnumerator GlitchCor;
+
     private void Start()
     {
-        StartCoroutine(RandomGlitch());
+        GlitchCor = RandomGlitch();
+        StartCoroutine(GlitchCor);
     }
-
     IEnumerator RandomGlitch()
     {
         int currentGlitchPanel = Random.Range(0, glitchPanels.Length);
@@ -31,5 +33,10 @@ public class Neon_Glitch : MonoBehaviour
             // 다음 글리치 패널 선택
             currentGlitchPanel = Random.Range(0, glitchPanels.Length);
         }
+    }
+
+    public void EndGlitch()
+    {
+        StopCoroutine(GlitchCor);
     }
 }
