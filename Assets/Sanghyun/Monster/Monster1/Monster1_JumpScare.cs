@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Monster1 : MonoBehaviour
+public class Monster1_JumpScare : MonoBehaviour
 {
     public GameObject jumpScare1;
     public GameObject jumpScare2;
