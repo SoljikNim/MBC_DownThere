@@ -1,0 +1,18 @@
+# Blender 3.4.1 MTL File: 'pottery1.blend'
+# www.blender.org
+
+newmtl Material.001
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+Ps 0.000000
+Pc 0.000000
+Pcr 0.030000
+aniso 0.000000
+anisor 0.000000
+map_Kd E:/things/E-art/blender/sbspnter/finishedmaps/pottery1/pottery_BaseColor.png
+map_Pm E:/things/E-art/blender/sbspnter/finishedmaps/pottery1/pottery_Metallic.png
+map_Pr E:/things/E-art/blender/sbspnter/finishedmaps/pottery1/pottery_Roughness.png
+map_Bump -bm 1.000000 E:/things/E-art/blender/sbspnter/finishedmaps/pottery1/pottery_Normal.png
