@@ -18,6 +18,11 @@ public class Monster1_JumpScare : MonoBehaviour
         }
     }
 
+    public void StartJumpScare1()
+    {
+        jumpScare1.SetActive(true);
+    }
+
     public void StartJumpScare2()
     {
         jumpScare2.SetActive(true);

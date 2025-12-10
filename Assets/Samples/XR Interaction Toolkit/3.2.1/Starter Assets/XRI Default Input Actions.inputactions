@@ -3435,6 +3435,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Player_Main",
+            "id": "ad852f54-ae11-4afd-b674-e40ae61114be",
+            "actions": [
+                {
+                    "name": "Hide",
+                    "type": "Button",
+                    "id": "b74ac9e8-ba14-419f-a1f0-799717ef0b25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5cd09de1-489f-4c73-9b15-c2a689e65d64",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef4e34da-551d-4217-8b4c-bbc9ff9a8385",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hide",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

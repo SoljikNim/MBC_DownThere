@@ -1,3 +1,4 @@
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class HideObject : MonoBehaviour
@@ -5,6 +6,7 @@ public class HideObject : MonoBehaviour
     public GameObject target;
     public Transform hidePos;
     public Transform outPos;
+    public Transform MonsterPos;
     public Animator anim;
 
     private void Start()
@@ -29,6 +31,8 @@ public class HideObject : MonoBehaviour
             anim.SetTrigger("Out");
             target.transform.position = outPos.position;
             target.transform.rotation = outPos.rotation;
+
+            target = null;
         }
     }
 }
