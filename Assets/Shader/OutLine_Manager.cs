@@ -4,8 +4,8 @@ using UnityEngine;
 public class OutLine_Manager : MonoBehaviour
 {
     public Transform playerPos;
-    public float StartRange = 5f;
-    public float EndRange = 0.5f;
+    public float StartRange = 7f;
+    public float EndRange = 0f;
     public Renderer[] renderers;
     public bool reverse = false;
     private void Start()
@@ -19,7 +19,6 @@ public class OutLine_Manager : MonoBehaviour
     {
         renderers = GetComponentsInChildren<Renderer>();
     }
-
     IEnumerator OutLine_Effect()
     {
         while (true)
