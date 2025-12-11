@@ -17,6 +17,8 @@ public class WaveGun : MonoBehaviour
     public TextMeshProUGUI ammoCount;
     public Image ammoTimer;
 
+    public AudioSource fireSfx;
+
     public bool canFire = true;
     void Start()
     {
@@ -71,6 +73,10 @@ public class WaveGun : MonoBehaviour
         float duration = 0f;
         float waveValue = 0f;
 
+        if (fireSfx != null)
+        {
+            fireSfx.Play();
+        }
         Instantiate(wavePrefab, transform.position, Quaternion.identity);
 
         while (duration < waveTime)

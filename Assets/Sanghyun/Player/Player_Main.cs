@@ -13,6 +13,7 @@ public class Player_Main : MonoBehaviour
 
     public HideObject currentHideObject;
 
+    public AudioSource heartBeatSfx;
 
 
     void Start()
@@ -24,6 +25,14 @@ public class Player_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentEnemy != null && !heartBeatSfx.isPlaying)
+        {
+            heartBeatSfx.Play();
+        }
+        else if (currentEnemy == null && heartBeatSfx.isPlaying)
+        {
+            heartBeatSfx.Stop();
+        }
     }
 
     public void SetHide(bool _bool)
