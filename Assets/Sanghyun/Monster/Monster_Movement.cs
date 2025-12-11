@@ -72,6 +72,25 @@ public class Monster_Movement : MonoBehaviour
         agent.speed = chaseSpeed;
     }
 
+    public void Stun()
+    {
+        StartCoroutine(StunCor());
+    }
+
+    public float stunTime = 5f;
+    IEnumerator StunCor()
+    {
+        freezeMove = true;
+        agent.ResetPath();
+        anim.SetTrigger("Stun");
+        yield return new WaitForSeconds(stunTime);
+        freezeMove = false;
+        if (target != null)
+            SetChase();
+        else
+            SetWander();
+    }
+
     public IEnumerator TryCatchTarget()
     {
         while (target != null)

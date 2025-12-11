@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3698044005964070848
+--- !u!114 &-5673393192210311681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
-  m_Name: ShockWave
+  m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
   m_Active: 1
   injectionPoint: 600
   fetchColorBuffer: 1
   requirements: -1
-  passMaterial: {fileID: 2100000, guid: 5502f6a8b4334db4e92c983441a9f7aa, type: 2}
+  passMaterial: {fileID: -876546973899608171, guid: f5b34182584410e4f85f0524de70482f, type: 3}
   passIndex: 0
   bindDepthStencilAttachment: 0
   m_Version: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
     probeSamplingDebugTexture: {fileID: 0}
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
-  - {fileID: -3698044005964070848}
-  m_RendererFeatureMap: 40c0bfd491e8adcc
+  - {fileID: -5673393192210311681}
+  m_RendererFeatureMap: ff552f5bf30e44b1
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
