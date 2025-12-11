@@ -1212,8 +1212,8 @@ GameObject:
   m_Component:
   - component: {fileID: 55561587}
   - component: {fileID: 55561590}
-  - component: {fileID: 55561589}
-  - component: {fileID: 55561588}
+  - component: {fileID: 55561591}
+  - component: {fileID: 55561592}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1229,44 +1229,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55561586}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17034192, y: -0, z: -0, w: 0.98538506}
-  m_LocalPosition: {x: 0.789, y: 0.866, z: -0.175}
-  m_LocalScale: {x: 0.30173, y: 0.009488202, z: 0.30173}
+  m_LocalRotation: {x: -0.15431023, y: 0.38009495, z: -0.072890736, w: 0.9090672}
+  m_LocalPosition: {x: 0.8, y: 0.866, z: -0.175}
+  m_LocalScale: {x: 0.23934752, y: 0.007526522, z: 0.23934752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 366766778}
-  m_LocalEulerAnglesHint: {x: -19.615, y: 0, z: 0}
---- !u!136 &55561588
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55561586}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.31
-  m_Height: 15.49
-  m_Direction: 1
-  m_Center: {x: -0.0000038146973, y: 0, z: -0.0000038146973}
---- !u!33 &55561589
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55561586}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_LocalEulerAnglesHint: {x: -13.011, y: 47.085, z: -14.857}
 --- !u!23 &55561590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1315,6 +1284,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &55561591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55561586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 2.0000007, z: 0.9999998}
+  m_Center: {x: -0.0000038146973, y: 0, z: -0.0000038146973}
+--- !u!114 &55561592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55561586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7f68e93ee0cb343b53a8d6c2008326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoatHandle
+  boatController: {fileID: 366766775}
+  leftHandTag: LeftHand
+  rightHandTag: RightHand
 --- !u!4 &58356446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449564, guid: c8b19df230669df4eb91d90849f0c80a, type: 3}
@@ -32827,6 +32832,14 @@ PrefabInstance:
     - target: {fileID: 6572762213020071836, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.01718092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914994302839341920, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
+      propertyPath: m_TagString
+      value: RightHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914994304324141983, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
+      propertyPath: m_TagString
+      value: LeftHand
       objectReference: {fileID: 0}
     - target: {fileID: 8480313516641936762, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
       propertyPath: m_TagString
