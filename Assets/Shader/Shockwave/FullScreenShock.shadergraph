@@ -101,6 +101,9 @@
         },
         {
             "m_Id": "dd81ddf910f84e388a478bc59ed98b72"
+        },
+        {
+            "m_Id": "e53ccc44c9554a8cbbb6f8227be2174b"
         }
     ],
     "m_GroupDatas": [],
@@ -228,20 +231,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "a8cc024e01ba41ddaaadd4a75f5f6a2d"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "6b2bed55515144d69d060d15a637e9fe"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "07b2543f2164429ea233087de949b60b"
                 },
                 "m_SlotId": 0
             }
@@ -397,6 +386,20 @@
                 "m_Node": {
                     "m_Id": "07b2543f2164429ea233087de949b60b"
                 },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "dd81ddf910f84e388a478bc59ed98b72"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "07b2543f2164429ea233087de949b60b"
+                },
                 "m_SlotId": 1
             }
         },
@@ -475,6 +478,9 @@
             },
             {
                 "m_Id": "c46351e9d41f48d894bfbd0348ea8c0c"
+            },
+            {
+                "m_Id": "e53ccc44c9554a8cbbb6f8227be2174b"
             }
         ]
     },
@@ -947,6 +953,21 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Cosine Time",
     "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "195c900e847e409c824ac46992ce2401",
+    "m_Id": 0,
+    "m_DisplayName": "Eye Depth",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "FullscreenEyeDepth",
+    "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
@@ -1892,7 +1913,7 @@
     "m_DepthWrite": false,
     "m_depthWriteMode": 0,
     "m_AllowMaterialOverride": false,
-    "m_DepthTestMode": 0
+    "m_DepthTestMode": 5
 }
 
 {
@@ -2145,8 +2166,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1007.9999389648438,
-            "y": -44.000003814697269,
+            "x": -1087.0,
+            "y": -22.00000762939453,
             "width": 145.0,
             "height": 128.00001525878907
         }
@@ -2426,7 +2447,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.5,
+    "m_Value": 1.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2574,7 +2595,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.5,
+    "m_Value": -0.10000000149011612,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2778,10 +2799,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -3042.0,
-            "y": -101.00000762939453,
+            "x": -3220.0,
+            "y": -33.999996185302737,
             "width": 133.0,
-            "height": 34.0
+            "height": 33.999996185302737
         }
     },
     "m_Slots": [
@@ -2872,6 +2893,40 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "e53ccc44c9554a8cbbb6f8227be2174b",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.FullscreenEyeDepth",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "195c900e847e409c824ac46992ce2401"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.FullscreenEyeDepth"
 }
 
 {
