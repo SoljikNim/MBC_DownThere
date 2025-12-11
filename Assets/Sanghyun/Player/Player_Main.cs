@@ -33,7 +33,7 @@ public class Player_Main : MonoBehaviour
         {
             if (_bool)
             {
-                //currentEnemy.PlayerHiding();
+                currentEnemy.PlayerHiding();
             }
             else
                 currentEnemy.watchPlayerHiding = false;

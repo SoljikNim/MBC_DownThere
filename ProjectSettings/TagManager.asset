@@ -8,8 +8,11 @@ TagManager:
   - StopZone
   - projectile
   - HideObject
+<<<<<<< HEAD
   - PlayerHead
-  layers:
+=======
+  - Enemy
+ layers:
   - Default
   - TransparentFX
   - Ignore Raycast
