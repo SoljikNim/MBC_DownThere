@@ -7,7 +7,7 @@ public class Monster_FindTarget : MonoBehaviour
     public Transform eyePos;
     public Transform target;
     public Player_Main player_main;
-
+    public AudioSource findTarget;
     void Start()
     {
         movement = GetComponentInParent<Monster_Movement>();
@@ -46,6 +46,7 @@ public class Monster_FindTarget : MonoBehaviour
     {
         if (other.CompareTag("Player") && !ObjectInMiddle(other.transform) && !other.GetComponentInParent<Player_Main>().isHide)
         {
+            findTarget.Play();
             player_main = other.GetComponentInParent<Player_Main>();
             target = other.transform;
             player_main.GetCaughted();
