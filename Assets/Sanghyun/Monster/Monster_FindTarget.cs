@@ -42,23 +42,30 @@ public class Monster_FindTarget : MonoBehaviour
         }
     }
 
+    public void SetTarget(GameObject _target)
+    {
+        print("¤·¤»");
+
+        findTarget.Play();
+        player_main = _target.GetComponentInParent<Player_Main>();
+        target = _target.transform;
+        player_main.GetCaughted();
+        player_main.currentEnemy = movement;
+
+        movement.target = target;
+        movement.player = player_main;
+        movement.SetChase();
+
+        StopAllCoroutines();
+        StartCoroutine(movement.TryCatchTarget());
+        StartCoroutine(movement.Miss_OutOfSight());
+    }
+
     private void TryTarget(Collider other)
     {
         if (other.CompareTag("Player") && !ObjectInMiddle(other.transform) && !other.GetComponentInParent<Player_Main>().isHide)
         {
-            findTarget.Play();
-            player_main = other.GetComponentInParent<Player_Main>();
-            target = other.transform;
-            player_main.GetCaughted();
-            player_main.currentEnemy = movement;
-
-            movement.target = target;
-            movement.player = player_main;
-            movement.SetChase();
-
-            StopAllCoroutines();
-            StartCoroutine(movement.TryCatchTarget());
-            StartCoroutine(movement.Miss_OutOfSight());
+            SetTarget(other.gameObject);
             tryingTarget = false;
         }
     }

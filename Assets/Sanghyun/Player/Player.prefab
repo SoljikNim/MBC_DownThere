@@ -653,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3709552827133177921}
   - component: {fileID: 346459256256571511}
+  - component: {fileID: 3437000084190609386}
   - component: {fileID: 5051571224395393657}
   - component: {fileID: 5901405263639550090}
   m_Layer: 3
@@ -696,6 +697,24 @@ MonoBehaviour:
   currentEnemy: {fileID: 0}
   currentHideObject: {fileID: 0}
   heartBeatSfx: {fileID: 3718020221487450551}
+--- !u!114 &3437000084190609386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834290793430556538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b57639cd0919a4ab02627067be08ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemManager
+  wave_ammo: 1
+  wave_cooldownTimer: 0
+  wave_canFire: 1
+  scanner_cooldownTimer: 10
+  scanner_canScan: 1
+  light_isOn: 1
 --- !u!136 &5051571224395393657
 CapsuleCollider:
   m_ObjectHideFlags: 0
