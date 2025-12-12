@@ -11,7 +11,7 @@ public class FindHideObject : MonoBehaviour
 
     public HapticImpulsePlayer haptic;
 
-    public float hideDistance = 1.5f;
+    public float hideDistance = 5f;
 
     private void FixedUpdate()
     {

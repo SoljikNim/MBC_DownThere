@@ -5,11 +5,12 @@ public class WaveGunBattery : MonoBehaviour
     WaveGun waveGun;
     void Start()
     {
-        waveGun = FindFirstObjectByType<WaveGun>();
     }
 
     public void GetAmmo()
     {
+        waveGun = FindFirstObjectByType<WaveGun>();
+        if (waveGun == null) return;
         waveGun.AddAmmo(1);
         Destroy(gameObject);
     }

@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 86688830917403856}
   - component: {fileID: 4380598673687678409}
   - component: {fileID: 6216872303790444432}
+  - component: {fileID: 9164815826502586314}
   m_Layer: 0
   m_Name: WaveGun
   m_TagString: Untagged
@@ -760,7 +761,7 @@ MonoBehaviour:
   universalRendererData: {fileID: 11400000, guid: 3bf77d39e22b27243af90239c2909c96, type: 2}
   waveTime: 0.5
   wavePrefab: {fileID: 979855182465115929, guid: b639cce5e6867944b90b1fbf8a1890b5, type: 3}
-  ammo: 3
+  ammo: 1
   cooldownTime: 2
   ammoCount: {fileID: 599029375813569988}
   ammoTimer: {fileID: 2955284663107054324}
@@ -954,6 +955,20 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &9164815826502586314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843514752579374001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9e33e45d517e94b98a0ffc2f198427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MikeNspiredXRIStarterKit.Runtime::MikeNspired.XRIStarterKit.InteractableItemData
+  canInventory: 1
+  canDistanceGrab: 1
 --- !u!1001 &7247420421831193781
 PrefabInstance:
   m_ObjectHideFlags: 0
