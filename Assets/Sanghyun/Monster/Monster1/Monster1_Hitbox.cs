@@ -3,6 +3,7 @@ using UnityEngine;
 public class Monster1_Hitbox : MonoBehaviour
 {
     public Monster_Movement monsterMovement;
+    public Monster_FindTarget monsterFindTarget;
     void Start()
     {
         

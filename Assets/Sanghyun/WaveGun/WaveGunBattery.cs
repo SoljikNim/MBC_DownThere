@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class WaveGunBattery : MonoBehaviour
 {
-    WaveGun waveGun;
-    void Start()
-    {
-    }
+    public ItemManager itemManager;
 
     public void GetAmmo()
     {
-        waveGun = FindFirstObjectByType<WaveGun>();
-        if (waveGun == null) return;
-        waveGun.AddAmmo(1);
+        itemManager = FindFirstObjectByType<ItemManager>();
+        if (itemManager == null) return;
+        itemManager.Wave_AddAmmo(1);
         Destroy(gameObject);
     }
 }
