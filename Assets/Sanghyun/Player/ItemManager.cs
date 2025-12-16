@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public InterfaceManager interfaceManager;
     [Header("WaveGun")]
     public int wave_ammo = 1;
     public float wave_cooldownTimer = 0;
@@ -31,6 +30,5 @@ public class ItemManager : MonoBehaviour
     public void Flash_Charge()
     {
         light_timer = light_maxTime;
-        interfaceManager.SetBattery(light_timer/light_maxTime);
     }
 }

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class InterfaceManager : MonoBehaviour
 {
+    public GameObject visible;
+    public GameObject whiteOut;
+    public AudioSource hologramVisible;
+
     public Vector2 defaultHeartRate = new Vector2(90,110);
     public Vector2 chaseHeartRate = new Vector2(120, 140);
 
@@ -19,9 +23,25 @@ public class InterfaceManager : MonoBehaviour
     WaitForSeconds chase_heartRateWait = new WaitForSeconds(0.4f);
 
     public Player_Main palyerMain;
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(HeartRateCor());
+        SetStamina(1);
+        SetBattery(1);
+    }
+
+    public void SetVisible(bool _bool)
+    {
+        whiteOut.SetActive(true);
+        Invoke(nameof(DeactiveWhite), 0.05f);
+        visible.SetActive(_bool);
+        if (_bool)
+            hologramVisible.Play();
+    }
+
+    void DeactiveWhite()
+    {
+        whiteOut.SetActive(false);
     }
 
     public void SetEnemy(Transform _enemyPos)

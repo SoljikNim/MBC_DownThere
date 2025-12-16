@@ -16,6 +16,7 @@ public class Player_Main : MonoBehaviour
     public DynamicMoveProvider controller;
 
     public InputActionReference runButton;
+    public InputActionReference moveButton;
     public float runThrehold = 0.5f;
     public float walkSpd = 7;
     public float runSpd = 10f;
@@ -39,11 +40,19 @@ public class Player_Main : MonoBehaviour
     void Update()
     {
         Vector2 runInput = runButton.action.ReadValue<Vector2>();
-        if (runInput.y >= runThrehold)
+        Vector2 moveInput = moveButton.action.ReadValue<Vector2>();
+        if (runInput.y >= runThrehold && moveInput.magnitude > 0)
         {
             if (!isRunning)
             {
                 SetRunning(true);
+            }
+        }
+        else
+        {
+            if (isRunning)
+            {
+                SetRunning(false);
             }
         }
 
