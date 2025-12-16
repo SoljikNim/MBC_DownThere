@@ -1,69 +1,80 @@
 using System.Collections;
 using TMPro;
+using Unity.VRTemplate;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class WaveGun : MonoBehaviour
 {
+    public ItemManager itemManager;
     public UniversalRendererData universalRendererData;
     FullScreenPassRendererFeature waveFeature;
     public float waveTime = 1.5f;
     public GameObject wavePrefab;
 
-    public int ammo = 1;
     public float cooldownTime = 2f;
 
     public TextMeshProUGUI ammoCount;
     public Image ammoTimer;
 
-    public bool canFire = true;
+    public AudioSource fireSfx;
+
     void Start()
     {
-        ammoCount.text = ammo.ToString("F0");
         if (universalRendererData.TryGetRendererFeature<FullScreenPassRendererFeature>(out var waveRender))
         {
             waveFeature = waveRender;
         }
         waveFeature.passMaterial.SetFloat("_WaveValue", -0.1f);
-        AddAmmo(0);
-        ammoTimer.fillAmount = 1f;
+    }
+
+    private void OnEnable()
+    {
+        itemManager = FindFirstObjectByType<ItemManager>();
+
+        ammoCount.text = itemManager.wave_ammo.ToString("F0");
+        SetAmmoText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (itemManager.wave_cooldownTimer < cooldownTime)
+        {
+            itemManager.wave_cooldownTimer = Mathf.Clamp(itemManager.wave_cooldownTimer + Time.deltaTime, 0f, cooldownTime);
+            ammoTimer.fillAmount = itemManager.wave_cooldownTimer / cooldownTime;
+            if (itemManager.wave_cooldownTimer == cooldownTime)
+                ammoTimer.fillAmount = 1f;
+        }
     }
 
     public void Fire()
     {
-        if (ammo > 0 && canFire)
+        if (itemManager.wave_ammo > 0 && itemManager.wave_canFire)
         {
-            AddAmmo(-1);
+            itemManager.wave_ammo--;
+            SetAmmoText();
             StartCoroutine(Cooldown());
             StartCoroutine(GunFire());
         }
     }
 
-    public void AddAmmo(int _int)
+    public void SetAmmoText()
     {
-        ammo += _int;
-        ammoCount.text = ammo.ToString("F0");
+        ammoCount.text = itemManager.wave_ammo.ToString("F0");
     }
 
     IEnumerator Cooldown()
     {
-        canFire = false;
-        float duration = 0f;
+        itemManager.wave_canFire = false;
+        itemManager.wave_cooldownTimer = 0f;
         ammoTimer.fillAmount = 0f;
-        while (duration < cooldownTime)
+        while (itemManager.wave_cooldownTimer < cooldownTime)
         {
-            duration = Mathf.Clamp(duration + Time.deltaTime, 0f, cooldownTime);
-            ammoTimer.fillAmount = duration / cooldownTime;
             yield return null;
         }
-        canFire = true;
+        itemManager.wave_canFire = true;
     }
 
     IEnumerator GunFire()
@@ -71,6 +82,10 @@ public class WaveGun : MonoBehaviour
         float duration = 0f;
         float waveValue = 0f;
 
+        if (fireSfx != null)
+        {
+            fireSfx.Play();
+        }
         Instantiate(wavePrefab, transform.position, Quaternion.identity);
 
         while (duration < waveTime)

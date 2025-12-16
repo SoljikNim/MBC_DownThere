@@ -8,7 +8,7 @@ public class OutLine_Manager : MonoBehaviour
     public float EndRange = 0f;
     public Renderer[] renderers;
     public bool reverse = false;
-    private void Start()
+    private void OnEnable()
     {
         GetChildRenderers();
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;

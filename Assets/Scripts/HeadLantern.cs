@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Playables; // 타임라인 재생을 위해 추가
 
 public class HeadLantern : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class HeadLantern : MonoBehaviour
 
     [Tooltip("충돌을 감지할 플레이어 머리 오브젝트의 태그 이름 (반드시 유니티 Tag 설정과 같아야 함)")]
     public string targetTag = "PlayerHead";
+
+    [Header("타임라인")] // 타임라인 관련 설정 추가
+    [Tooltip("헤드랜턴 착용 시 재생할 타임라인")]
+    public PlayableDirector equipTimeline; // 타임라인 변수 추가
 
     private bool isActivated = false;
 
@@ -54,8 +59,19 @@ public class HeadLantern : MonoBehaviour
     {
         if (Lanternlight != null)
         {
-           Lanternlight.SetActive(true);
+            Lanternlight.SetActive(true);
             isActivated = true;
+
+            // 4. (추가) 타임라인 재생
+            if (equipTimeline != null)
+            {
+                equipTimeline.Play();
+                Debug.Log("Head Lantern Equip Timeline Started.");
+            }
+            else
+            {
+                Debug.LogWarning("Equip Timeline is not assigned to HeadLantern script.");
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ public class Monster_Movement : MonoBehaviour
     public Transform target;
     public Player_Main player;
 
+    public AudioSource stunSfx;
     void Start()
     {
         findTarget = GetComponentInChildren<Monster_FindTarget>();
@@ -45,13 +46,13 @@ public class Monster_Movement : MonoBehaviour
         {
             if (agent.hasPath)
             {
-                print("가는중");
+                //print("가는중");
             }
             else
             {
                 Vector3 randomDestPos = Random.insideUnitSphere * wanderRange;
                 agent.SetDestination(transform.position + randomDestPos);
-                print("목표지점 설정");
+                //print("목표지점 설정");
             }
         }
     }
@@ -83,6 +84,7 @@ public class Monster_Movement : MonoBehaviour
         freezeMove = true;
         agent.ResetPath();
         anim.SetTrigger("Stun");
+        stunSfx.Play();
         yield return new WaitForSeconds(stunTime);
         freezeMove = false;
         if (target != null)

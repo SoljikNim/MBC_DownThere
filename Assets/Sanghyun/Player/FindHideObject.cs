@@ -11,6 +11,19 @@ public class FindHideObject : MonoBehaviour
 
     public HapticImpulsePlayer haptic;
 
+    public float hideDistance = 5f;
+
+    private void FixedUpdate()
+    {
+        if (hideObject != null)
+        {
+            float distance = Vector3.Distance(player.transform.position, hideObject.transform.position);
+            if (distance > hideDistance)
+            {
+                hideObject = null;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
