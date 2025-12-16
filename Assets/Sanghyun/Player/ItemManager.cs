@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
+    public InterfaceManager interfaceManager;
     [Header("WaveGun")]
     public int wave_ammo = 1;
     public float wave_cooldownTimer = 0;
@@ -16,6 +17,7 @@ public class ItemManager : MonoBehaviour
 
     [Header("PowerLight")]
     public bool light_isOn = true;
+    public float light_maxTime = 120f;
     public float light_timer = 120f;
 
     public void Wave_AddAmmo(int _count)
@@ -24,5 +26,11 @@ public class ItemManager : MonoBehaviour
         WaveGun wavegun = FindFirstObjectByType<WaveGun>();
         if (wavegun == null) return;
         wavegun.SetAmmoText();
+    }
+
+    public void Flash_Charge()
+    {
+        light_timer = light_maxTime;
+        interfaceManager.SetBattery(light_timer/light_maxTime);
     }
 }

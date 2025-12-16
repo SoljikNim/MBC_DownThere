@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e09bf2b8440954790a5475cf9ab9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kraken_Move
-  liveTime: 5
-  moveSpeed: 10
+  liveTime: 6
+  moveSpeed: 30
   fadeTime: 1
   renderers:
   - {fileID: 2575643972988659305}

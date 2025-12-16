@@ -59,6 +59,8 @@ public class Monster_Movement : MonoBehaviour
 
     public void SetWander()
     {
+        player.currentEnemy = null;
+
         target = null;
         findTarget.target = null;
         player = null;

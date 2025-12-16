@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OutLine_Manager
   playerPos: {fileID: 0}
   StartRange: 7
-  EndRange: 0
+  EndRange: 1
   renderers:
   - {fileID: 1325187066570678258}
   reverse: 0
@@ -899,15 +899,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc12b4e804a4ea442aeacf1a84157c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveGun
+  itemManager: {fileID: 0}
   universalRendererData: {fileID: 11400000, guid: 3bf77d39e22b27243af90239c2909c96, type: 2}
   waveTime: 0.5
   wavePrefab: {fileID: 979855182465115929, guid: b639cce5e6867944b90b1fbf8a1890b5, type: 3}
-  ammo: 1
   cooldownTime: 2
   ammoCount: {fileID: 599029375813569988}
   ammoTimer: {fileID: 2955284663107054324}
   fireSfx: {fileID: 6547698600162074507}
-  canFire: 1
 --- !u!65 &86688830917403856
 BoxCollider:
   m_ObjectHideFlags: 0
