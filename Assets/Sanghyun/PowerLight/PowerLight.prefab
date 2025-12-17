@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 7804487856667481853}
   - component: {fileID: 2792930367223920434}
   - component: {fileID: 31837682306193145}
+  - component: {fileID: 7711678124958768380}
   m_Layer: 0
   m_Name: PowerLight
   m_TagString: Untagged
@@ -695,6 +696,20 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &7711678124958768380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607809440669260102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9e33e45d517e94b98a0ffc2f198427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MikeNspiredXRIStarterKit.Runtime::MikeNspired.XRIStarterKit.InteractableItemData
+  canInventory: 1
+  canDistanceGrab: 1
 --- !u!1 &5332904417825688929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OutLine_Manager
   playerPos: {fileID: 0}
   StartRange: 7
-  EndRange: 0.5
+  EndRange: 1
   renderers:
   - {fileID: 1628390785611970299}
   - {fileID: 8220813648571541028}

@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/XRI Starter Kit/Hands & Poses/Robot Hand/Model/GloveHand.prefab.meta
+guid: e939d3b2a5f7b9241922780ee78133fb
+PrefabImporter:
+========
 guid: 38435bad3f9f07448958f9012c62c362
 DefaultImporter:
+>>>>>>>> 46bbe1d7433a342616042a3d64c4148c48b233ab:Assets/_Recovery/0 (5).unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

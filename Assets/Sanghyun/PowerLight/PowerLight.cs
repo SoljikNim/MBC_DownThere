@@ -3,6 +3,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class PowerLight : MonoBehaviour
 {
+    public InterfaceManager interfaceManager;
     public AudioSource buttonSfx;
     public GameObject lightObj;
     public float maxLightTime = 120f;
@@ -18,6 +19,7 @@ public class PowerLight : MonoBehaviour
     public ItemManager itemManager;
     private void OnEnable()
     {
+        interfaceManager = FindFirstObjectByType<InterfaceManager>();
         itemManager = FindFirstObjectByType<ItemManager>();
         lightObj.SetActive(itemManager.light_isOn);
     }
@@ -27,13 +29,15 @@ public class PowerLight : MonoBehaviour
         if (itemManager != null && itemManager.light_isOn) {
             if (itemManager.light_timer > 0)
             {
-                float per = (itemManager.light_timer / maxLightTime);
+                float per = (itemManager.light_timer / itemManager.light_maxTime);
                 itemManager.light_timer -= Time.deltaTime;
                 caughtBoxScale.x = per;
                 caughtBoxScale.y = per;
                 caughtBoxScale.z = per;
                 caughtBox.localScale = caughtBoxScale;
                 spotLight.intensity = maxLightIntencity * per;
+
+                interfaceManager.SetBattery(per);
             }
             else
             {
