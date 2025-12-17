@@ -2321,11 +2321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2792930367223920434, guid: 2d73f1300febc2448869f3dd1f7097ca, type: 3}
       propertyPath: maxLightTime
-      value: 9999
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 2792930367223920434, guid: 2d73f1300febc2448869f3dd1f7097ca, type: 3}
       propertyPath: maxLightIntencity
-      value: 9999
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 3607809440669260102, guid: 2d73f1300febc2448869f3dd1f7097ca, type: 3}
       propertyPath: m_Name
