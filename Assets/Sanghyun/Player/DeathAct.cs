@@ -3,7 +3,10 @@ using UnityEngine;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using UnityEngine.SceneManagement;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -20,7 +23,10 @@ public class DeathAct : MonoBehaviour
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public GameObject[] camEffect;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -67,6 +73,7 @@ public class DeathAct : MonoBehaviour
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         camEffect[0].SetActive(false);
         camEffect[1].SetActive(false);
         restartInterface.SetActive(true);
@@ -76,6 +83,11 @@ public class DeathAct : MonoBehaviour
     {
         SceneManager.LoadScene( _sceneName );
     }
+=======
+
+        restartInterface.SetActive(true);
+    }
+>>>>>>> Stashed changes
 =======
 
         restartInterface.SetActive(true);
