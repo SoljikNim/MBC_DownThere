@@ -34,7 +34,11 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     globalScale: 0.25
+=======
+    globalScale: 1
+>>>>>>> Stashed changes
 =======
     globalScale: 1
 >>>>>>> Stashed changes
@@ -96,7 +100,11 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     globalScale: 0.0025
+=======
+    globalScale: 1
+>>>>>>> Stashed changes
 =======
     globalScale: 1
 >>>>>>> Stashed changes

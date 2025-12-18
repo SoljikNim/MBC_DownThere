@@ -611,6 +611,9 @@ MonoBehaviour:
   blackOutTIme: 2
   restartInterface: {fileID: 1830649008}
   interfaceShowTimer: 1
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &338391177
 GameObject:
@@ -1070,6 +1073,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547277545}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &597790543
 GameObject:
@@ -1936,6 +1942,7 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6c2be8bcb332c4a90f50bcded7ddd6, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &1010423164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2018,6 +2025,8 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe02b479114ac24e8c847f5153930c9, type: 3}
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1052069045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2148,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052069045}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &1067894402
 GameObject:
@@ -3964,6 +3976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &3300032092422011865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4034,10 +4047,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8040499946273602300, guid: fcad743b45a1fcb4db8d143d6d8fae07, type: 3}
   m_PrefabInstance: {fileID: 3300032092422011865}
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!4 &2767143287837092188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3664742606649571982, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
   m_PrefabInstance: {fileID: 131109831037513402}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3859842453847351420
@@ -4387,6 +4405,9 @@ PrefabInstance:
       propertyPath: obstructionMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     - target: {fileID: 5488531092969311083, guid: b454b0f101b6957439981936c46b15f4, type: 3}
       propertyPath: m_LocalPosition.x
