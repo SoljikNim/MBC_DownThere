@@ -11,6 +11,8 @@ TagManager:
   - PlayerHead
   - LeftHand
   - RightHand
+  - Enemy
+  - ButtonObject
   layers:
   - Default
   - TransparentFX

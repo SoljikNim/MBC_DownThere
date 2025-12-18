@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathAct : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DeathAct : MonoBehaviour
     public float blackOutTIme = 2f;
     public GameObject restartInterface;
     public float interfaceShowTimer = 2f;
+    public GameObject[] camEffect;
 
     void Start()
     {
@@ -44,7 +46,13 @@ public class DeathAct : MonoBehaviour
         sightRender.material.SetFloat("_FeatheringEffect", 0);
 
         yield return new WaitForSeconds(interfaceShowTimer);
-
+        camEffect[0].SetActive(false);
+        camEffect[1].SetActive(false);
         restartInterface.SetActive(true);
+    }
+
+    public void MoveScene(string _sceneName)
+    {
+        SceneManager.LoadScene( _sceneName );
     }
 }

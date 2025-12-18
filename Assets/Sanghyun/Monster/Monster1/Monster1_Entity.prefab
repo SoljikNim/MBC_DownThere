@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster1_Hitbox
   monsterMovement: {fileID: 5418892681556600898}
+  monsterFindTarget: {fileID: 9092798869905784020}
 --- !u!54 &1310389157331108694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1230,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.45
+      value: 20.86
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1238,23 +1239,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.24
+      value: -26.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.2485383
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.9686221
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1262,7 +1263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -151.218
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dde7c20e5f30c264f9cd3adecaa452d3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1443,7 +1444,7 @@ MonoBehaviour:
   watchPlayerHiding: 0
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 63
+    m_Bits: 4294967295
 --- !u!114 &4672626724533774387
 MonoBehaviour:
   m_ObjectHideFlags: 0
