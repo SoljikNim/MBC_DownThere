@@ -7,7 +7,7 @@ public class CinematicBars : MonoBehaviour
     public Material skyboxMat;
     public Camera cam;
 
-    bool isOpen = false;
+    // bool isOpen = false;
     public void SetCinematicFOV()
     {
         StartCoroutine(FOVRoutine(35));
@@ -57,15 +57,15 @@ public class CinematicBars : MonoBehaviour
 
     IEnumerator Sequence()
     {
-        // 1. Ä«¸Þ¶ó ½Ã³×¸¶Æ½ FOV
+        // 1. Ä«ï¿½Þ¶ï¿½ ï¿½Ã³×¸ï¿½Æ½ FOV
         StartCoroutine(FOVRoutine(35));
 
-        // 2. ½ºÄ«ÀÌ¹Ú½º ÀÚ¿¬½º·´°Ô ¾îµÓ°Ô
+        // 2. ï¿½ï¿½Ä«ï¿½Ì¹Ú½ï¿½ ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ó°ï¿½
         StartCoroutine(ChangeExposure(1f, 0.05f));
 
         yield return new WaitForSeconds(3f);
 
-        // 3. Áö¿ª ÀüÈ¯ ¿Ï·á ÈÄ FOV º¹±Í
+        // 3. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½Ï·ï¿½ ï¿½ï¿½ FOV ï¿½ï¿½ï¿½ï¿½
         StartCoroutine(FOVRoutine(60));
     }
 }

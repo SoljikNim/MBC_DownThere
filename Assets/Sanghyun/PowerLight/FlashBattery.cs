@@ -10,7 +10,7 @@ public class FlashBattery : MonoBehaviour
         itemManager = FindFirstObjectByType<ItemManager>();
         if (itemManager == null) return;
         itemManager.Flash_Charge();
-        getSfx.Play();
+        getSfx.PlayOneShot(getSfx.clip);
         Destroy(gameObject);
     }
 }

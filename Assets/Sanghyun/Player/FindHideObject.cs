@@ -50,28 +50,26 @@ public class FindHideObject : MonoBehaviour
     {
         if (ctx.performed)
         {
-            print("1");
             if (hideObject != null)
             {
-                print("2");
                 if (!player_Main.isHide)
                 {
-                    print("3");
                     player_Main.currentHideObject = hideObject;
                     player_Main.SetHide(true);
                     hideObject.target = player;
 
                     hideObject.anim.SetTrigger("In");
+                    hideObject.sfx_open.Play();
                     player.transform.position = hideObject.hidePos.position;
                     player.transform.rotation = hideObject.hidePos.rotation;
                 }
                 else
                 {
-                    print("4");
                     player_Main.currentHideObject = null;
                     player_Main.SetHide(false);
 
                     hideObject.anim.SetTrigger("Out");
+                    hideObject.sfx_close.Play();
                     player.transform.position = hideObject.outPos.position;
                     player.transform.rotation = hideObject.outPos.rotation;
 
