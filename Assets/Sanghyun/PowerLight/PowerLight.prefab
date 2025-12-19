@@ -77,10 +77,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 76.9
+  m_Intensity: 55.69
   m_Range: 16.36
   m_SpotAngle: 30
-  m_InnerSpotAngle: 24.689177
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -549,13 +549,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0ea0ea8e6f970429aa1835476a4a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerLight
-  interfaceManager: {fileID: 0}
   buttonSfx: {fileID: 2369302898557780630}
   lightObj: {fileID: 1589287550990765313}
   maxLightTime: 120
   spotLight: {fileID: 187294104819374825}
   caughtBox: {fileID: 6819106204112833476}
-  maxLightIntencity: 68.6
+  maxLightIntencity: 55.69
   itemManager: {fileID: 0}
 --- !u!114 &31837682306193145
 MonoBehaviour:

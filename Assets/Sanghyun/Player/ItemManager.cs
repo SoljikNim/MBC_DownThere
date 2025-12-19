@@ -19,10 +19,6 @@ public class ItemManager : MonoBehaviour
     public float light_maxTime = 120f;
     public float light_timer = 120f;
 
-    [Header("Tresure")]
-    public int tresure = 0;
-    public GameObject ropeGrab;
-
     public void Wave_AddAmmo(int _count)
     {
         wave_ammo += _count;
@@ -34,14 +30,5 @@ public class ItemManager : MonoBehaviour
     public void Flash_Charge()
     {
         light_timer = light_maxTime;
-    }
-
-    public void AddTresure()
-    {
-        tresure++;
-        if (tresure >= 3)
-        {
-            ropeGrab.SetActive(true);
-        }
     }
 }

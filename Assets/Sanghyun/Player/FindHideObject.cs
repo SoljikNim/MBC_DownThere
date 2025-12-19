@@ -50,13 +50,10 @@ public class FindHideObject : MonoBehaviour
     {
         if (ctx.performed)
         {
-            print("1");
             if (hideObject != null)
             {
-                print("2");
                 if (!player_Main.isHide)
                 {
-                    print("3");
                     player_Main.currentHideObject = hideObject;
                     player_Main.SetHide(true);
                     hideObject.target = player;
@@ -67,7 +64,6 @@ public class FindHideObject : MonoBehaviour
                 }
                 else
                 {
-                    print("4");
                     player_Main.currentHideObject = null;
                     player_Main.SetHide(false);
 
