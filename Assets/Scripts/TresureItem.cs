@@ -9,7 +9,8 @@ public class TresureItem : MonoBehaviour
         itemManager = FindFirstObjectByType<ItemManager>();
         if (itemManager == null) return;
         itemManager.AddTresure();
-        getSfx.Play();
+        if (getSfx != null)
+            getSfx.PlayOneShot(getSfx.clip);
         Destroy(gameObject);
     }
 }

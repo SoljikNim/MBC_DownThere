@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: dff6e1c94cfa393458dbe2aeb45d48f1, type: 3}
+  m_Resource: {fileID: 8300000, guid: e3b1a23358ff4e749b05d360c9e8fe5f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 2177225611868589973}
   - component: {fileID: 3458168963940634421}
   - component: {fileID: 710520480611437711}
+  - component: {fileID: 3436064467684872610}
   m_Layer: 0
   m_Name: Flash_Battery
   m_TagString: Untagged
@@ -369,6 +370,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.04, y: 0.1, z: 0.05}
   m_Center: {x: 0, y: 0.05, z: 0}
+--- !u!114 &3436064467684872610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334534345228852227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9e33e45d517e94b98a0ffc2f198427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MikeNspiredXRIStarterKit.Runtime::MikeNspired.XRIStarterKit.InteractableItemData
+  canInventory: 1
+  canDistanceGrab: 1
 --- !u!1 &4925194368172656956
 GameObject:
   m_ObjectHideFlags: 0

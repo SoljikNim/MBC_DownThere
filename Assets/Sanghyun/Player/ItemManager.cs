@@ -1,3 +1,4 @@
+using System.Collections;
 using Newtonsoft.Json.Bson;
 using Unity.Burst.CompilerServices;
 using Unity.VRTemplate;
@@ -23,6 +24,9 @@ public class ItemManager : MonoBehaviour
     public int tresure = 0;
     public GameObject ropeGrab;
 
+    public GameObject endDialog;
+    public float dialogTime = 10;
+
     public void Wave_AddAmmo(int _count)
     {
         wave_ammo += _count;
@@ -41,7 +45,15 @@ public class ItemManager : MonoBehaviour
         tresure++;
         if (tresure >= 3)
         {
+            StartCoroutine(GetAllItems());
             ropeGrab.SetActive(true);
         }
+    }
+    
+    IEnumerator GetAllItems()
+    {
+        endDialog.SetActive(true);
+        yield return new WaitForSeconds(dialogTime);
+        endDialog.SetActive(false);
     }
 }

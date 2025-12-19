@@ -9,6 +9,9 @@ public class HideObject : MonoBehaviour
     public Transform MonsterPos;
     public Animator anim;
 
+    public AudioSource sfx_open;
+    public AudioSource sfx_close;
+
     private void Start()
     {
         
