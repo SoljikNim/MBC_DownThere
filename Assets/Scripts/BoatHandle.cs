@@ -14,16 +14,14 @@ public class BoatHandle : MonoBehaviour
     [Header("XR Grab Interactables")]
     [Tooltip("왼쪽 손잡이의 XR Grab Interactable 컴포넌트")]
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable leftHandleGrab;
-    [Tooltip("오른쪽 손잡이의 XR Grab Interactable 컴포넌트")]
-    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable rightHandleGrab;
 
     private bool isLeftGrabbed = false;
-    private bool isRightGrabbed = false;
+    private bool isRightGrabbed = true;
 
     void Start()
     {
         // 1. 할당 여부 확인
-        if (leftHandleGrab == null || rightHandleGrab == null)
+        if (leftHandleGrab == null)
         {
             Debug.LogError("Both Left and Right Handle Grab Interactables must be assigned in the Inspector.");
             return;
@@ -33,10 +31,6 @@ public class BoatHandle : MonoBehaviour
         // 왼쪽 손잡이 이벤트
         leftHandleGrab.selectEntered.AddListener(OnSelectEnteredLeft);
         leftHandleGrab.selectExited.AddListener(OnSelectExitedLeft);
-
-        // 오른쪽 손잡이 이벤트
-        rightHandleGrab.selectEntered.AddListener(OnSelectEnteredRight);
-        rightHandleGrab.selectExited.AddListener(OnSelectExitedRight);
     }
 
     // 왼쪽 손잡이 이벤트 처리
@@ -95,11 +89,6 @@ public class BoatHandle : MonoBehaviour
         {
             leftHandleGrab.selectEntered.RemoveListener(OnSelectEnteredLeft);
             leftHandleGrab.selectExited.RemoveListener(OnSelectExitedLeft);
-        }
-        if (rightHandleGrab != null)
-        {
-            rightHandleGrab.selectEntered.RemoveListener(OnSelectEnteredRight);
-            rightHandleGrab.selectExited.RemoveListener(OnSelectExitedRight);
         }
     }
 

@@ -3656,9 +3656,9 @@ MonoBehaviour:
   wave_canFire: 1
   scanner_cooldownTimer: 0
   scanner_canScan: 1
-  light_isOn: 1
-  light_maxTime: 120
-  light_timer: 120
+  light_isOn: 0
+  light_maxTime: 180
+  light_timer: 180
   tresure: 0
   ropeGrab: {fileID: 0}
   endDialog: {fileID: 2689002588799481533}
