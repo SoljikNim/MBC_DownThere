@@ -1577,6 +1577,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 183.977, y: 138.568, z: 210.911}
+--- !u!114 &786293706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9092798869905784020, guid: b454b0f101b6957439981936c46b15f4, type: 3}
+  m_PrefabInstance: {fileID: 5427057851466859632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78690af619c57ce42a1fc5f8fe04113d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Monster_FindTarget
 --- !u!1 &850769093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,6 +3101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5773897050925551123, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6677934633220741051, guid: 8f1ca7980184b454bb181fb0e5e07244, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.589
@@ -4211,6 +4226,14 @@ PrefabInstance:
       value: Monster1
       objectReference: {fileID: 0}
     - target: {fileID: 5418892681556600898, guid: b454b0f101b6957439981936c46b15f4, type: 3}
+      propertyPath: jumpScare
+      value: 
+      objectReference: {fileID: 154639768}
+    - target: {fileID: 5418892681556600898, guid: b454b0f101b6957439981936c46b15f4, type: 3}
+      propertyPath: findTarget
+      value: 
+      objectReference: {fileID: 786293706}
+    - target: {fileID: 5418892681556600898, guid: b454b0f101b6957439981936c46b15f4, type: 3}
       propertyPath: wanderBound
       value: 
       objectReference: {fileID: 642805969}
@@ -4253,6 +4276,10 @@ PrefabInstance:
     - target: {fileID: 5488531092969311083, guid: b454b0f101b6957439981936c46b15f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092798869905784020, guid: b454b0f101b6957439981936c46b15f4, type: 3}
+      propertyPath: obstructionMask.m_Bits
+      value: 51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
