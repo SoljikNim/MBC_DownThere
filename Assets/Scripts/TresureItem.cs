@@ -10,7 +10,7 @@ public class TresureItem : MonoBehaviour
         if (itemManager == null) return;
         itemManager.AddTresure();
         if (getSfx != null)
-            getSfx.PlayOneShot(getSfx.clip);
+            FindFirstObjectByType<PlayerAudioPlayer>().GetComponent<AudioSource>().PlayOneShot(getSfx.clip);
         Destroy(gameObject);
     }
 }
