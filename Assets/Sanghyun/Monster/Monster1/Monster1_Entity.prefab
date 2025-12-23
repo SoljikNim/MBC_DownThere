@@ -1481,7 +1481,7 @@ MonoBehaviour:
   tryingTarget: 0
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 51
 --- !u!1001 &5449800363473513600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,8 +1703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a49defded8f084b98538898da3cd6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Monster_Movement
-  findTarget: {fileID: 0}
-  jumpScare: {fileID: 0}
+  findTarget: {fileID: 9092798869905784020}
+  jumpScare: {fileID: 4672626724533774387}
   anim: {fileID: 9176614770838044456}
   agent: {fileID: 433056750140971371}
   freezeMove: 0

@@ -9,7 +9,7 @@ public class WaveBattery : MonoBehaviour
         itemManager = FindFirstObjectByType<ItemManager>();
         if (itemManager == null) return;
         itemManager.Wave_AddAmmo(1);
-        getSfx.PlayOneShot(getSfx.clip);
+        FindFirstObjectByType<PlayerAudioPlayer>().GetComponent<AudioSource>().PlayOneShot(getSfx.clip);
         Destroy(gameObject);
     }
 }

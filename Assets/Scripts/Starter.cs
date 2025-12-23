@@ -5,6 +5,7 @@ public class Starter : MonoBehaviour
 {
     public InputActionReference inputAction;
     public PlayBtn playBtn;   // 인스펙터에서 할당
+    public GameObject PlayObject;
 
     private void OnEnable()
     {
@@ -27,6 +28,7 @@ public class Starter : MonoBehaviour
     private void TriggerMethod()
     {
         Debug.Log("메서드 실행됨");
+        PlayObject.SetActive(false);
         playBtn.OnPlayClicked();   // 인스턴스 메서드 실행
     }
 }

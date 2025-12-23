@@ -30,6 +30,8 @@ public class Player_Main : MonoBehaviour
     public float stamina = 7f;
     public float staminaHealMult = 0.75f;
 
+    public AudioSource runSfx;
+
     void Start()
     {
         caughtEffect.SetActive(false);
@@ -90,6 +92,11 @@ public class Player_Main : MonoBehaviour
             _bool = false;
 
         isRunning = _bool;
+        if (_bool)
+            runSfx.Play();
+        else
+            runSfx.Stop();
+
         controller.moveSpeed = _bool ? runSpd : walkSpd;
     }
 

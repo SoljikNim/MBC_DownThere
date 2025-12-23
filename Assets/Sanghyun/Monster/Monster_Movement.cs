@@ -121,8 +121,10 @@ public class Monster_Movement : MonoBehaviour
 
     public void SetWander()
     {
-        player.currentEnemy = null;
-        agent.ResetPath();
+        if (player != null)
+        {
+            player.currentEnemy = null;
+        }
         target = null;
         findTarget.target = null;
         player = null;

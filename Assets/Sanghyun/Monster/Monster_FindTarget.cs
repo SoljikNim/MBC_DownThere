@@ -20,6 +20,7 @@ public class Monster_FindTarget : MonoBehaviour
     {
         if (other.CompareTag("Player") && !tryingTarget && target == null)
         {
+            print("1");
             tryingTarget = true;
             StartCoroutine(CheckTargetable(other));
         }
@@ -35,8 +36,10 @@ public class Monster_FindTarget : MonoBehaviour
 
     IEnumerator CheckTargetable(Collider other)
     {
+        print("2");
         while (tryingTarget)
         {
+            print("3");
             TryTarget(other);
             yield return null;
         }
@@ -44,8 +47,6 @@ public class Monster_FindTarget : MonoBehaviour
 
     public void SetTarget(GameObject _target)
     {
-        print("¤·¤»");
-
         findTarget.Play();
         player_main = _target.GetComponentInParent<Player_Main>();
         target = _target.transform;
@@ -63,10 +64,17 @@ public class Monster_FindTarget : MonoBehaviour
 
     private void TryTarget(Collider other)
     {
-        if (other.CompareTag("Player") && !ObjectInMiddle(other.transform) && !other.GetComponentInParent<Player_Main>().isHide)
+        if (other.CompareTag("Player") && !ObjectInMiddle(other.transform) && !other.GetComponent<Player_Main>().isHide)
         {
+            print("4");
             SetTarget(other.gameObject);
             tryingTarget = false;
+        }
+        else
+        {
+            /*print("other.CompareTag(\"Player\") : " + other.CompareTag("Player"));
+            print("ObjectInMiddle(other.transform) : "+ ObjectInMiddle(other.transform));
+            print("other.GetComponent<Player_Main>().isHide : "+ other.GetComponent<Player_Main>().isHide);*/
         }
     }
 

@@ -25,6 +25,7 @@ public class InterfaceManager : MonoBehaviour
     public Player_Main palyerMain;
     private void OnEnable()
     {
+        SetVisible(false);
         StartCoroutine(HeartRateCor());
         SetStamina(1);
         SetBattery(1);
